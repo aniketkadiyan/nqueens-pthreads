@@ -1,4 +1,5 @@
-CFLAGS := $(CFLAGS) -fopenmp -std=c99
+CFLAGS := $(CFLAGS) -std=c99
+LDFLAGS := $(LDFLAGS) -lpthread
 
 all: nqueens-pthreads
 
