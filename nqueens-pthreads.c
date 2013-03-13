@@ -32,7 +32,7 @@ int atomic_grab_next(void){
    int retval = -1;
 #ifdef USE_PTHREAD_SYNC
    pthread_mutex_lock(&grabbed_lock);
-      if(grabbed <= jobs)
+      if(grabbed < jobs)
          retval = (++grabbed);
    pthread_mutex_unlock(&grabbed_lock);
 #else // USE_PTHREAD_SYNC
